@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link rel="stylesheet" href="BOOT/bootstrap.css"/>
+    <link rel="stylesheet" href="css/audi.css"/>
+    <link rel="stylesheet" href="css/new.css"/>
+    <script src="BOOT/jquery.min.js"></script>
+    <script src="BOOT/popper.min.js"></script>
+    <script src="BOOT/bootstrap.min.js"></script>
+    <script src="js/jquery.1.7.2.min.js"></script>
+    <script src="new.js"></script>
+    <title></title>
+    <style>
+        .navmenu{
+            position: relative;
+        }
+        .navitem{
+            background: #343a40;
+            color: white;
+            font-weight: bold;
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 130px;
+        }
+        #nav1{
+            background: #fff;
+            width: 1400px;
+            height: 690px;
+            position: absolute;
+            z-index: 2;
+            color:black;
+        }
+        #nav1 p{
+            width: 357px;
+            height: 47px;
+            border-top:1px solid #4c4c4c;
+            line-height: 47px;
+            cursor: pointer;
+        }
+        #nav1 p:hover{
+            color:darkred;
+        }
+        #nav1 #photo{
+            width: 820px;
+            height: 315px;
+        }
+        #nav1>li:first-child ul li:hover{
+            color:darkred;
+            cursor: pointer;
+        }
+        .fivebg{
+            background: #4c4c4c;
+        }
+
+        #top{
+            height: 4rem;
+        }
+        #nav ul li a:hover{
+            color: dodgerblue !important;
+        }
+        #first-one{
+            position: relative !important;
+        }
+        /*#first{*/
+        /*/!*float: left !important;*!/*/
+        /*position: absolute !important;*/
+        /*top: 7%;*/
+        /*left: 5%;*/
+
+        /*}*/
+        /*#first button{*/
+        /*background:white;*/
+        /*width: 15rem;*/
+        /*height: 4rem;*/
+        /*position: relative;*/
+        /*top: 5rem;*/
+        /*left: 4rem;*/
+        /*}*/
+        /*#first button:hover{*/
+        /*opacity: 0.7;*/
+        /*}*/
+        @media  screen and (min-width: 1500px){
+            #first{
+                position: absolute !important;
+                top: 7%;
+                left: 5%;
+            }
+            #first button{
+                background:black;
+                color: white;
+                width: 15rem;
+                height: 4rem;
+                position: relative;
+                top: 5rem;
+                left: 4rem;
+                outline:0 none;
+                border: 0;
+            }
+            #first button:hover{
+                opacity: 0.7;
+            }
+        }
+        @media  screen and (max-width: 1499px){
+            #first{
+                /*position: absolute !important;*/
+                /*top: 100%;*/
+                /*left: 5%;*/
+                margin-left: 50px;
+            }
+            #first h2{
+                font-size: 20px;
+            }
+            #first h1{
+                font-size: 20px;
+            }
+            #first h3{
+                font-size: 20px;
+            }
+            #first button{
+                background:black;
+                width: 15rem;
+                height: 4rem;
+                color: white;
+                font-weight: bold;
+                /*position: relative;*/
+                /*top: 5rem;*/
+                /*left: 4rem;*/
+            }
+            #first button:hover{
+                opacity: 0.7;
+            }
+        }
+        #two img:hover{
+            opacity: 0.7;
+        }
+        #three-one{
+            background: #b3b3b3;
+        }
+        #three-one button{
+            background:black;
+            color: white;
+            width: 15rem;
+            height: 4rem;
+            position: relative;
+            top: 5rem;
+            left: 4rem;
+            outline:0 none;
+            border: 0;
+        }
+        #three-two img{
+            transition:all 3s !important;
+        }
+        #three-two{
+            overflow: hidden;
+        }
+        #three-two:hover img{
+            transform: scale(1.2) !important;
+        }
+        #three-three img:hover{
+            opacity: 0.5;
+        }
+        .fourbg{
+            background: #f2f2f2;
+        }
+        .fivebg{
+            background: #4c4c4c;
+        }
+        #five-foot a{
+            color:#999 !important;
+            font-size: 13px !important;
+        }
+
+
+        .tab-content img:hover{
+            opacity: 0.8;
+        }
+        .carousel-indicators li {
+            position: relative;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 3px;
+            margin-left: 3px;
+            text-indent: -999px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            display: inline-block;
+            width: 40px;
+            height:40px;
+            background-size: 100% 100%;
+            z-index: 200;
+        }
+        .carousel-control-prev-icon{
+            margin-left: -60%;
+        }
+        .carousel-control-next-icon{
+            margin-right:-60%;
+        }
+        video{
+            object-fit:fill;
+        }
+        #v{
+            position: relative;
+        }
+        #ctr{
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-top:-60px;
+            margin-left:-60px;
+        }
+        #ctrl img{
+            width:120px;
+            height:120px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container p-0">
+    <div class="row d-flex" id="top">
+        <div class="col-md-2 ">
+            <a href="audi.html">
+                <img class="" src="routes/image/01.png" alt=""/>
+            </a>
+        </div>
+        <div class="col-md-8"></div>
+        <div class="col-md-2 p-0 text-right">
+            <img class="" src="routes/image/02.jpg" style="width: 250px" alt=""/>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div class="carousel mt-2" data-ride="carousel" id="demo">
+        <ol class="carousel-indicators">
+            <li data-slide-to="0" data-target="#demo" class="active"></li>
+            <li data-slide-to="1" data-target="#demo"></li>
+            <li data-slide-to="2" data-target="#demo"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item ">
+                <img class="w-100" src="routes/image/new/roll1.jpg" alt=""/>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="routes/image/new/roll2.jpg" alt=""/>
+            </div>
+            <div class="carousel-item active">
+                <img class="w-100" src="routes/image/new/roll3.jpg" alt=""/>
+            </div>
+        </div>
+        <a href="#demo" data-slide="prev" class="carousel-control-prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#demo" data-slide="next" class="carousel-control-next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <!--导航栏-->
+    <div id="mynav">
+        <ul class="  nav nav-pills bg-dark">
+            <li class="nav-item ml-5"><a class="text-white nav-link active" href="#1" data-toggle="pill"  >奥迪概念车</a></li>
+            <li class="nav-item ml-5"><a class="text-white nav-link" href="#2" data-toggle="pill" >奥迪设计</a></li>
+            <li class="nav-item ml-5"><a class="text-white nav-link" href="#3" data-toggle="pill" >奥迪quattro</a></li>
+            <li class="nav-item ml-5"><a class="text-white nav-link" href="#4" data-toggle="pill" >奥迪驾驶系统</a></li>
+            <li class="nav-item ml-5"><a class="text-white nav-link" href="#5" data-toggle="pill" >奥迪connect互联科技</a></li>
+
+            <li class="nav-item ml-5"><a class="text-white nav-link" href="#" data-toggle="pill" ></a></li>
+            <li class="nav-item ml-5"><a class="text-white nav-link" href="#" data-toggle="pill" ></a></li>
+            <li class="nav-item ml-3"><a class="text-white nav-link" href="#" data-toggle="pill" ></a></li>
+            <li class="nav-item ml-3"><a class="text-white nav-link" href="#" data-toggle="pill" ></a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <!--1-->
+        <div id="1" class="tab-pane active">
+            <h1 class="font-weight-bold mt-5 text-center">驾驭未来</h1>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p class="mt-4 font-weight-bold">奥迪会定期展示应用创新运动和技术理念的新概念车。同时，也会推出面向未来的长期设计蓝图。在创新概念车技术开发过程中，会对测试材料进行推广，并确保车辆达到标准结构要求。因此，这些开发过程不仅仅停留在纸面设计阶段，而是真正进行实体建造。</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念图1-1.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">
+                        奥迪Aicon</h2>
+                    <p class="font-weight-bold mt-5">奥迪Aicon探索了未来自动驾驶豪华轿车的每一个环节，其中包括设计研究，技术演示，移动概念，从而保证整体设计方案秉承奥迪优良的传统。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念图1-2.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">奥迪PB18 e-tron</h2>
+                    <p class="font-weight-bold mt-5">采用电动力的高性能跑车：在加利福尼亚州的圆石滩汽车周，奥迪首创展示其全新的设计和技术理念。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念图1-3.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">奥迪Elaine</h2>
+                    <p class="font-weight-bold mt-5">首创推出的IAA概念车与其第二代电动车的先驱产品采用了相同的车身曲线设计和电传动系统，尤其是风格鲜明的外部车灯更加令人惊艳。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--2-->
+        <div id="2" class="tab-pane">
+            <h1 class="font-weight-bold mt-5 text-center">驾驭设计</h1>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p class="mt-4 font-weight-bold">奥迪的设计方案始终遵循科技领导创新的理念。通过采用循序渐进的解决方案，有助于使设计达到和谐而实用的效果</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念2-1.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">
+                        面向2030年的操作理念</h2>
+                    <p class="font-weight-bold mt-5">十年以后，奥迪会如何操作汽车？用手势、语言、全息图还是眼睛？让我们与奥迪共同畅想未来。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念2-2.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">时间旅行者</h2>
+                    <p class="font-weight-bold mt-5">奥迪外观设计师贾森·巴特斯比在英戈尔施塔特生活和工作，他是《星球大战》的铁杆影迷。他花费了四个月的业务时间，制作了一架《星球大战》中的钛战机。在创作过程中，他在慕尼黑找到了所需的灵感，并从奥迪车中找到了自由翱翔的感觉。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念2-3.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">现代触控功能</h2>
+                    <p class="font-weight-bold mt-5">多媒体交互触控响应操作系统通过感觉刺激来优化人机互动。两个中央触控屏提供了触觉、声音和视觉响应功能，使操作能力达到了一个全新的高度。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--3-->
+        <div id="3" class="tab-pane">
+            <h1 class="font-weight-bold mt-5 text-center">奥迪四驱技术</h1>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p class="mt-4 font-weight-bold">在驾驶四驱车时您会充分体验到这种无可比拟的优异性能，为什么呢？因为这种传动系统用进步的四驱技术提供强大的动力和优越的安全性，而且同时能让驾驶者体验非凡的乐趣。在某些路况下，比如湿滑路面或土路，配备quattro驱动器的奥迪也可以让车辆安全、轻松地行驶</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念3-1.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">
+                        在过去的35年中，奥迪一直在推动quattro技术的发展</h2>
+                    <p class="font-weight-bold mt-5">共有八百多万辆奥迪车采用了quattro技术，因此奥迪公司是全球最成功的全轮驱动系统高端制造商。在不远的将来，奥迪月球quattro也许还将登上月球。奥迪的quattro技术是汽车发展历史的一个里程碑</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念3-2.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">quattro技术于1980年的日内瓦车展初次亮相。</h2>
+                    <p class="font-weight-bold mt-5">在1986年，奥迪公司用托森式差速器取代了第一代人工锁定式中央差速器，从而达到灵活分配传动转矩的效果。在2005年，奥迪又开发出通过非对称的方式分配基本的动态作用力的周转齿轮</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念3-3.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">quattro驱动器</h2>
+                    <p class="font-weight-bold mt-5">在采用横向安装的发动机的紧凑型结构系列中，后轴上安装了配有液压驱动和电子控制功能多盘离合器。多片离合器位于R8中置发动机跑车的前轴，这些控制系统能够根据驾驶状态，主动调节动力，使其在两个车轴之间合理分配。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--4-->
+        <div id="4" class="tab-pane">
+            <h1 class="font-weight-bold mt-5 text-center">未来的运动性能</h1>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p class="mt-4 font-weight-bold">为了实现更加出色的传动系统，我们采用独特的能源和全新的传动理念把能力提升到无可比拟的水平，更加注重整体满足所有性能标准的同时还要降低二氧化碳排放量，给驾驶者不断创造新的乐趣。
+                        新推出的e-tron，g-tron和h-tron产品，标志着我们已经踏上了新时代的旅程。</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念4-1.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">
+                        新型传动系统
+                        e-tron</h2>
+                    <p class="font-weight-bold mt-5">e-tron诠释了电动车技术的种种优势：人车合一，无所不往，无往不利。在诸多电动车款式中，既有插电式混合动力车，也有纯电动车，其中还包括奥迪首款量产纯电动车e-tron。从e-tron开始，电动车品牌和款式开始打上深深的电动技术烙印。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念4-2.webp" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">新型传动系统
+                        h-tron</h2>
+                    <p class="font-weight-bold mt-5">纯电动车型，使用氢气作为能源，四分钟即可完成燃料添加。采用奥迪四驱理念，可以将目前常规电动车所需的充电时间大大缩短。推动相关理念研究的是一种燃料电池技术。它可以用氢气发电，奥迪在其电力-燃料工厂制造氢气，这些设备使用二氧化碳作为原料，可以保证环保、清洁的发电效果。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念4-3.webp" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">新型传动系统
+                        g-tron</h2>
+                    <p class="font-weight-bold mt-5">奥迪的g-tron车型采用天然气加汽油的混合动力。在整车设计中，将这种动力模式与电子油门结合在一起，从而在运动性能、设计理念、远程机动性、可再生能源等方面达到顶端的效果。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--5-->
+        <div id="5" class="tab-pane">
+            <h1 class="font-weight-bold mt-5 text-center">奥迪connect互联科技</h1>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p class="mt-4 font-weight-bold">Audi connect互联科技提供信息和娱乐功能，将汽车与驾驶员、互联网和基础设施链接成网，使驾驶舒适性与乐趣达到一个全新水平。轻触间，让您的驾驶体验一步到位，确保高水准的驾驭便利性和舒适度。</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念5-1.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">
+                        踏上Audi connect互联科技之旅</h2>
+                    <p class="font-weight-bold mt-5">曾经提前做好线路规划才能放心出行，行车途中的小状况会让人措手不及，长途行车是那样枯燥乏味，直到Audi connect互联科技的出现，让曾经的种种成为了过去式。即刻开启Audi connect互联科技之旅。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念5-2.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">Audi connect全方位功能，打造移动的网络服务</h2>
+                    <p class="font-weight-bold mt-5">Audi connect可实时接入互联网，拉近人与车以及环境之间的互动，在线提供包括导航、道路救援、信息娱乐、无线局域网等在内的一系列信息与服务。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 row">
+                <div class="col-md-6">
+                    <img class="w-100" src="routes/image/new/概念5-3.jpg" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="font-weight-bold mt-2">Audi connect WIFI App，个性化的信息服务</h2>
+                    <p class="font-weight-bold mt-5">Audi connect WIFI App包括最后一公里导航、POI发送到车、蜻蜓FM，让更近一步的导航信息及个性化的娱乐信息尽在指尖。</p>
+                    <div class="mt-5 ml-1">
+                        <a href="" class="font-weight-bold pt-5 h4">了解更多 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--视频-->
+    <div>
+        <h1 class="font-weight-bold mt-5 text-center">Audi WIFI App
+            个性化的信息服务</h1>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p class="mt-4 font-weight-bold">奥迪会定期展示应用创新运动和技术理念的新概念车。同时，也会推出面向未来的长期设计蓝图。在创新概念车技术开发过程中，会对测试材料进行推广，并确保车辆达到标准结构要求。因此，这些开发过程不仅仅停留在纸面设计阶段，而是真正进行实体建造。</p>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-12" id="v1">
+                <video id="v" class="mt-3" src="routes/image/new/new.mp4" width="100%" height="600" controls></video>
+                <a id="ctr">
+                    <img src="routes/image/new/play.png" alt=""/>
+                </a>
+            </div>
+        </div>
+        <h1 class="font-weight-bold mt-5 text-center">Audi 独特设计</h1>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <img class="w-100" src="routes/image/new/buttom1.jpg" alt=""/>
+            </div>
+            <div class="col-md-6">
+                <img class="w-100" src="routes/image/new/buttom2.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div id="five" class="fivebg mt-3">
+        <div  class="container">
+            <ul class="row list-unstyled ml-5 pl-5">
+                <li class="col-md-4 mt-5">
+                    <img class="w-25" src="routes/image/icon1.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">索取报价</a>
+                </li>
+                <li class="col-md-4 mt-5">
+                    <img class="w-25" src="routes/image/icon2.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">查询经销商</a>
+                </li>
+                <li class="col-md-4 mt-5">
+                    <img class="w-25" src="routes/image/icon3.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">预约试驾</a>
+                </li>
+                <li class="col-md-4 mt-5 mb-5">
+                    <img class="w-25" src="routes/image/icon4.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">索取产品手册</a>
+                </li>
+                <li class="col-md-4 mt-5 mb-5">
+                    <img class="w-25" src="routes/image/icon5.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">查询新车库存</a>
+                </li>
+                <li class="col-md-4 mt-5 mb-5">
+                    <img class="w-25" src="routes/image/icon6.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">奥迪在线4S店</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-5">
+            <a class="ml-4 text-white" href="">订阅奥迪新闻专递</a>
+            <a class="ml-4 text-white" href="">隐私权/版权</a>
+            <a class="ml-4 text-white" href="">奥迪全球</a>
+            <a class="ml-4 text-white" href="">一汽-大众</a>
+            <a class="ml-4 text-white" href="">English Version</a>
+            <a class="ml-4 text-white" href="">吉ICP备09000793号</a>
+            <a class="ml-4 text-white" href="">吉公网安备 22010602000241号</a>
+        </div>
+        <hr class="bg-white"/>
+        <div id="five-foot" class="ml-5 pb-2">
+            <a class="text-white" href="">© 2019 一汽-大众汽车有限公司 版权所有</a>
+        </div>
+    </div>
+</div>
+
+</body>
+<!--<script src="js/navfix.js"></script>-->
+
+<script>
+    (function($) {
+        $.fn.navfix = function(mtop, zindex) {
+            var nav = $(this),
+                    mtop = mtop,
+                    zindex = zindex,
+                    dftop = nav.offset().top - $(window).scrollTop(),
+                    dfleft = nav.offset().left - $(window).scrollLeft(),
+                    dfcss = new Array;
+            dfcss[0] = nav.css("position"),
+                    dfcss[1] = nav.css("top"),
+                    dfcss[2] = nav.css("left"),
+                    dfcss[3] = nav.css("zindex"),
+                    $(window).scroll(function(e) {
+                        $(this).scrollTop() > dftop ? $.browser.msie && $.browser.version == "6.0" ? nav.css({
+                            position: "absolute",
+                            top: eval(document.documentElement.scrollTop),
+                            left: dfleft,
+                            "z-index": zindex
+                        }) : nav.css({
+                            position: "fixed",
+                            top: mtop + "px",
+                            left: dfleft,
+                            "z-index": zindex
+                        }) : nav.css({
+                            position: dfcss[0],
+                            top: dfcss[1],
+                            left: dfcss[2],
+                            "z-index": dfcss[3]
+                        })
+                    })
+        }
+    }
+    )(jQuery)
+    //   视频
+    var v1=document.getElementById("v1");
+    var v=document.getElementById('v');
+    var ctr=document.getElementById('ctr');
+    var img=document.querySelector('#ctr img');
+    v1.onmousemove=function(){
+        ctr.style.display='block';
+    }
+    v1.onmouseout=function(){
+        ctr.style.display='none';
+    }
+    ctr.onclick=function(e){
+        e.preventDefault();
+        if(v.paused){
+            v.play();
+            img.src='routes/image/new/pause.png';
+            console.log(img.src);
+        }else{
+            v.pause();
+            img.src='routes/image/new/play.png';
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#mynav').navfix(0,300);
+    });
+    //第一个值： 你期望导航在距离顶部多少的位置浮动
+    //第二个值： 导航zindex
+</script>
+</html>

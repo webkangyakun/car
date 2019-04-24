@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link rel="stylesheet" href="BOOT/bootstrap.css"/>
+    <script src="BOOT/jquery.min.js"></script>
+    <script src="BOOT/popper.min.js"></script>
+    <script src="BOOT/bootstrap.min.js"></script>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{text-decoration: none;
+          color:black;
+        }
+        #dA{
+            width: 1440px;
+            height: 30px;
+            background: #30373d;
+            margin:0 auto;
+
+        }
+        #dA a{
+            color:whitesmoke;
+        }
+        #dA a:nth-child(1){
+            font-size: 20px;
+            margin-left: 20px;
+            font-family: "bookman old style";
+            font-weight: bolder;
+        }
+        #dA a:nth-child(2){
+            margin-left: 1200px;
+        }
+        #dB{
+            width: 1440px;
+            height: 35px;
+            background: #f6f6f6;
+            margin: 0 auto;
+        }
+        #dB a{padding: 20px;
+              line-height: 35px;
+        }
+        #dC{
+            width: 1440px;
+            /*height: 40px;*/
+            margin: 0 auto;
+        }
+        #dC-1 a{
+               font-size: 20px;
+            font-weight: bolder;
+            margin-left: 40px;
+            line-height:40px ;
+        }
+        #dC-1 input{
+            margin-left: 1000px;
+        }
+        #dC-2{
+            width: 1440px;
+            height: 50px;
+            background: dodgerblue;
+        }
+        #dC-2 a{
+              padding: 42px;
+              font-weight: bolder;
+            color: wheat;
+            line-height: 50px;
+
+        }
+        #dD{
+            width: 1440px;
+            height: 850px;
+            margin: 0 auto;
+            /*margin-top:52px;*/
+            position: relative;
+            /*border: 1px solid red;*/
+        }
+        #dD ul{
+            list-style: none;
+        }
+        #dD-1{
+            height: 580px;
+            position: absolute;
+            left: 50px;
+            border: 1px solid wheat;
+            overflow:auto;
+            color: #4c4c4c;
+            font-weight: bold;
+        }
+        #dD li{
+            top: 10px;
+        }
+        #dD-2{
+            position: absolute;
+            left: 20px;
+            color:#4c4c4c ;
+            font-weight: bold;
+        }
+        #dD-3{
+            position: absolute;
+            left: 220px;
+            top: 20px;
+        }
+        #dD-3 table{
+            position: absolute;
+            width: 1200px;
+            height:116px;
+            /*border-bottom: 2px solid darkgrey;*/
+            border-collapse: collapse;
+            text-align: center;
+            font-weight: bold;
+        }
+        #dD-3 table td{
+            border-bottom: 2px solid darkgrey;
+        }
+        #dD-3 table tr td:first-child{
+
+            /*width: 40px;*/
+            /*height: 40px;*/
+            background:deepskyblue;
+        }
+        #dD-3 table a:hover{
+            color: deepskyblue;
+        }
+        #dD-4 span{
+            position:absolute;
+            width: 20%;
+            left: 230px;
+            top: 208px;
+            font-weight: bold;
+
+        }
+        #a1{
+            position: absolute;
+            left: 220px;
+            top:228px;
+        }
+         p{
+            text-align: center;
+        }
+        #a1 p:nth-child(3){color: red;}
+        #a2{
+            position: absolute;
+            left:525px;
+            top:228px;
+        }
+        #a2 p:nth-child(3){color: red;}
+         .a{
+            margin-left: 85px;
+             font-family: "宋体";
+         }
+         .a:hover{
+             color: dodgerblue;
+             font-size: large;
+         }
+        #a3{
+            position: absolute;
+            left:830px;
+            top:228px;
+        }
+        #a3 p:nth-child(3){color: red;}
+        #a4{
+            position: absolute;
+            left:1135px;
+            top:228px;
+        }
+        #a4 p:nth-child(3){color: red;}
+        #a5{
+            position: absolute;
+            left:220px;
+            top:555px;
+        }
+        #a5 p:nth-child(3){color: red;}
+        #a6{
+            position: absolute;
+            left:525px;
+            top:555px;
+        }
+        #a6 p:nth-child(3){color: red;}
+        #a7{
+            position: absolute;
+            left:830px;
+            top:555px;
+        }
+        #a7 p:nth-child(3){color: red;}
+        #a8{
+            position: absolute;
+            left:1135px;
+            top:555px;
+        }
+        #a8 p:nth-child(3){color: red;}
+        #a9{
+            position: absolute;
+            left:28px;
+            top: 645px;
+        }
+        #dE{
+            width: 1440px;
+            height: 90px;
+            margin: 0 auto;
+            background: #4c4c4c;
+            position: absolute;
+            top: 900px;
+            color: snow;
+        }
+        #dE a{
+            color:snow;
+            display:inline-block;
+            margin-top: 27px;
+            margin-left: 45px;
+        }
+        #dE a:hover{
+            color:yellow;
+        }
+        #dE div{
+            margin-top: 20px;
+            margin-left: 45px;
+            font-weight: lighter;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+   <div id="dA">
+       <a href="audi.html">奥迪汽车</a>
+       <a href="#">郑州车市</a>
+   </div>
+   <div id="dB">
+       <a href="#">选车</a>
+       <a href="#">新车</a>
+       <a href="#">导购*试车</a>
+       <a href="#">车图</a>
+       <a href="#">SUV</a>
+       <a href="#">买车</a>
+       <a href="#">报价</a>
+       <a href="#">经销商</a>
+       <a href="#">车优惠</a>
+       <a href="#">二手车</a>
+       <a href="#">用车</a>
+       <a href="#">商城</a>
+       <a href="#">社区</a>
+       <a href="#">XBB</a>
+       <a href="#">热帖</a>
+       <a href="#">精选</a>
+       <a href="#">文化</a>
+   </div>
+   <div id="dC">
+       <div id="dC-1">
+           <a href="#">选车中心</a>
+          <input type="text" placeholder="搜索一下"/>
+       </div>
+       <div id="dC-2">
+           <a href="#">新车</a>
+           <a href="#">SUV</a>
+           <a href="#">新能源</a>
+           <a href="#">导购</a>
+           <a href="#">试驾</a>
+           <a href="#">爱卡视频</a>
+           <a href="#">油耗</a>
+           <a href="#">车图</a>
+           <a href="#">对比</a>
+           <a href="#">说真的</a>
+           <a href="#">排行榜</a>
+       </div>
+   </div>
+   <div id="dD">
+       <div id="dD-1">
+           <ul>
+               <li>一汽-大众奥迪（9）</li>
+               <li>奥迪A4L</li>
+               <li>奥迪Q2L</li>
+               <li>奥迪A3三厢</li>
+               <li>奥迪A3两厢</li>
+               <li>奥迪A6L</li>
+               <li>奥迪Q5L</li>
+               <li>Audi Sport（8）</li>
+               <li>奥迪RS4</li>
+               <li>奥迪TT RS</li>
+               <li>奥迪RS3</li>
+               <li>奥迪RS7</li>
+               <li>奥迪RS6</li>
+               <li>奥迪R8</li>
+               <li>奥迪RS Q5</li>
+               <li>奥迪RS5</li>
+               <li>奥迪进口（35）</li>
+               <li>奥迪AI</li>
+               <li>奥迪A3 e-tron</li>
+               <li>奥迪TTS双门</li>
+               <li>奥迪S3三厢</li>
+               <li>奥迪A5敞篷</li>
+               <li>奥迪S4</li>
+               <li>奥迪A4 allroad</li>
+               <li>奥迪A5双门</li>
+               <li>奥迪A5掀背</li>
+               <li>奥迪S5掀背</li>
+               <li>奥迪S5双门</li>
+               <li>奥迪A7</li>
+               <li>奥迪A6 allroad</li>
+               <li>奥迪A6 Avant</li>
+               <li>奥迪TTS敞篷</li>
+               <li>奥迪A6双混</li>
+               <li>奥迪A8L</li>
+               <li>奥迪Q3</li>
+               <li>奥迪Q5</li>
+           </ul>
+       </div>
+       <div id="dD-2">
+           <a href="">A</a><br/>
+           <a href="">B</a><br/>
+           <a href="">C</a><br/>
+           <a href="">D</a><br/>
+           <a href="">E</a><br/>
+           <a href="">F</a><br/>
+           <a href="">G</a><br/>
+           <a href="">H</a><br/>
+           <a href="">I</a><br/>
+           <a href="">J</a><br/>
+           <a href="">K</a><br/>
+           <a href="">L</a><br/>
+           <a href="">M</a><br/>
+           <a href="">N</a><br/>
+           <a href="">O</a><br/>
+           <a href="">P</a><br/>
+           <a href="">Q</a><br/>
+           <a href="">R</a><br/>
+           <a href="">S</a><br/>
+           <a href="">T</a><br/>
+           <a href="">U</a><br/>
+           <a href="">V</a><br/>
+           <a href="">W</a><br/>
+           <a href="">X</a><br/>
+           <a href="">Y</a><br/>
+           <a href="">Z</a><br/>
+           <a href="">#</a><br/>
+       </div>
+       <div id="dD-3">
+           <h3>选车条件</h3>
+           <br/>
+           <table>
+               <tr>
+                   <td>价格</td>
+                   <td>不限</td>
+                   <td><a href="">5万以上</a></td>
+                   <td><a href="">5-8万</a></td>
+                   <td><a href="">8-12万</a></td>
+                   <td><a href="">12-18万</a></td>
+                   <td><a href="">18-25万</a></td>
+                   <td><a href="">25-35万</a></td>
+                   <td><a href="">35-50万</a></td>
+               </tr>
+
+               <tr>
+                   <td>级别</td>
+                   <td>不限</td>
+                   <td><a href="">轿车</a></td>
+                   <td><a href="">SUV</a></td>
+                   <td><a href="">MPV</a></td>
+                   <td><a href="">跑车</a></td>
+                   <td><a href="">皮卡</a></td>
+                   <td><a href="">轻客</a></td>
+                   <td><a href="">微卡</a></td>
+               </tr>
+
+               <tr>
+                   <td>结构</td>
+                   <td>不限</td>
+                   <td>两厢</td>
+                   <td>三厢</td>
+                   <td>旅行车</td>
+                   <td>掀背车</td>
+                   <td>顶级敞篷</td>
+                   <td>硬顶敞篷</td>
+                   <td>飞车</td>
+               </tr>
+           </table>
+       </div>
+       <div id="dD-4">
+           <span>一汽-大众奥迪</span>
+           <div id="a1">
+               <img src="routes/image/a1.jpg" alt=""/>
+               <p>奥迪A3三厢</p>
+               <p>19.65-25.62万</p>
+               <a href="" class="a">10个车型符合条件</a>
+           </div>
+           <div id="a2">
+               <img src="routes/image/a2.jpg" alt=""/>
+               <p>奥迪A3两厢</p>
+               <p>19.05-25.02万</p>
+               <a href="" class="a">14个车型符合条件</a>
+           </div>
+           <div id="a3">
+               <img src="routes/image/a3.jpg" alt=""/>
+               <p>奥迪A4L</p>
+               <p>29.05-41.02万</p>
+               <a href="" class="a">12个车型符合条件</a>
+           </div>
+           <div id="a4">
+               <img src="routes/image/a4.jpg" alt=""/>
+               <p>奥迪A6L</p>
+               <p>40.05-69.02万</p>
+               <a href="" class="a">18个车型符合条件</a>
+           </div>
+           <div id="a5">
+               <img src="routes/image/a5.jpg" alt=""/>
+               <p>奥迪A6L e-tron</p>
+               <p>45.48万</p>
+               <a href="" class="a">8个车型符合条件</a>
+           </div>
+           <div id="a6">
+               <img src="routes/image/a6.jpg" alt=""/>
+               <p>奥迪Q2L</p>
+               <p>21.48-27.90万</p>
+               <a href="" class="a">6个车型符合条件↓</a>
+           </div>
+           <div id="a7">
+               <img src="routes/image/a7.jpg" alt=""/>
+               <p>奥迪Q3</p>
+               <p>23.48-37.90万</p>
+               <a href="" class="a">9个车型符合条件</a>
+           </div>
+           <div id="a8">
+               <img src="routes/image/a8.jpg" alt=""/>
+               <p>奥迪Q5L</p>
+               <p>39.28-51.90万</p>
+               <a href="" class="a">3个车型符合条件</a>
+           </div>
+           <div id="a9">
+               <img src="routes/image/erweima.jpg" alt="" height="150px"/>
+               <p>扫我关注</p>
+           </div>
+       </div>
+       <div id="dE">
+           <a href="">订阅奥迪新闻传递</a>
+           <a href="">隐私权/版权</a>
+           <a href="">奥迪全球</a>
+           <a href="">一汽大众</a>
+           <a href="">English Version</a>
+           <a href="">吉ICP备09545645号</a>
+           <a href="">吉公网安备22010602000241号</a>
+           <div>© 2019 一汽-大众汽车有限公司 版权所有</div>
+       </div>
+   </div>
+</body>
+</html>

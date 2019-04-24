@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link rel="stylesheet" href="BOOT/bootstrap.css"/>
+    <script src="BOOT/jquery.min.js"></script>
+    <script src="BOOT/popper.min.js"></script>
+    <script src="BOOT/bootstrap.min.js"></script>
+    <script src="js/index-地图.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <!-- <script src="https://api.map.baidu.com/api?v=2.0&ak=RZZ2gObry82Y2BSzZ1xzMhfm&callback=mapinit"></script> -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <link rel="stylesheet" href="css/audi.css"/>
+    <link rel="stylesheet" href="login.css"/>
+    <title></title>
+    <style type="text/css">
+        html,body{margin:0;padding:0;}
+        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    </style>
+</head>
+<body>
+<div class="container bg-white">
+    <div class="row d-flex" id="top">
+        <div class="col-md-2 ">
+            <a href="audi.html">
+                <img class="" src="routes/image/01.png" alt=""/>
+            </a>
+        </div>
+        <div class="col-md-8"></div>
+        <div class="col-md-2 p-0 text-right">
+            <img class="" src="routes/image/02.jpg" style="width: 250px" alt=""/>
+        </div>
+    </div>
+    <h3 class="mt-5 font-weight-bold">预约试驾</h3>
+    <hr/>
+    <div class="row mt-5" id="menu">
+        <!--左边表单-->
+        <div class="col-md-5 ">
+            <div class="row">
+                    <div class="col-md-4 text-center">意 向 车 型 :</div>
+                    <div class="col-md-8  p-o">
+                      <div class="dropdown">
+                        <select class="form-control active w-100 into selecter">
+                            <option href="" > 车 系 </option>
+                            <option href=""  value=" A 3 "> A 3 </option>
+                            <option href=""  value=" A 4 "> A 4 </option>
+                            <option href=""  value=" A 5 "> A 5 </option>
+                            <option href=""  value=" A 6 "> A 6 </option>
+                            <option href=""  value=" A 7 "> A 7 </option>
+                            <option href=""  value=" A 8 "> A 8 </option>
+                            <option href=""  value=" Q 2 "> Q 2 </option>
+                            <option href=""  value=" Q 3 "> Q 3 </option>
+                            <option href=""  value=" Q 5 "> Q 5 </option>
+                            <option href=""  value=" T T "> T T </option>
+                            <option href=""  value="e - t r o n ">e - t r o n </option>
+                        </select>
+                      </div>
+                          <select class="form-control w-100 selecter ">
+                            <option value=""> 车 型 </option>
+                            <option href=""> 任 意 一 款  </option>
+                          </select>
+                    </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 text-center">意 向 经 销 商 :</div>
+                <div class="col-md-8  p-o">
+                    <!--下拉内容-->
+                    <select class="form-control active w-100 selecter">
+                        <option href="" class="dropdown-item  ">H 河 南 </option>
+                        <option href="" class="dropdown-item active"> 经 销 商 省 </option>
+                        <option href="" class="dropdown-item  "> A 安 徽 </option>
+                        <option href="" class="dropdown-item  "> B 北 京 </option>
+                        <option href="" class="dropdown-item  "> C 重 庆 </option>
+                        <option href="" class="dropdown-item  "> H 河 南 </option>
+                        <option href="" class="dropdown-item  "> T 天 津 </option>
+                        <option href="" class="dropdown-item  "> Z 浙 江 </option>
+                    </select>
+                    <!--下拉内容-->
+                    <select class="form-control active w-100 selecter">
+                        <option href="" class="dropdown-item "> Z 郑 州 </option>
+                        <option href="" class="dropdown-item active">经销商市</option>
+                        <option href="" class="dropdown-item ">P 平 顶 山</option>
+                        <option href="" class="dropdown-item ">Z 郑 州 </option>
+                        <option href="" class="dropdown-item ">N 南 阳 </option>
+                        <option href="" class="dropdown-item ">Z 驻 马 店 </option>
+                    </select>
+                    <!--下拉内容-->
+                    <select class="form-control active w-100 selecter">
+                        <option href="" class="dropdown-item active"> 经 销 商 </option>
+                        <option href="" class="dropdown-item "> 任 意 一 家 </option>
+                        <option href="" class="dropdown-item ">河南豫海销售有限公司</option>
+                    </select>
+               </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 text-center "> 姓 名：</div>
+                <div class="w-100 col-md-8 ">
+                    <input class="w-100 ipt"  type="text" id="input1" placeholder="请填写您的姓名" value="" required  minlength="2" maxlength="4"/><br/>
+                    <input class="mt-3 qwer" type="radio" id="qq" name="1" value="先生"/>
+                    <label for="qq">先生</label>
+                    <br/>
+                    <input class="mt-3 qwer" type="radio" id="pp" name="1" value="女士"/>
+                    <label for="pp">女士</label>
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 text-center "> 电 话：</div>
+                <div class="w-100 col-md-8 ">
+                    <input class="w-100 ipt"  type="text" id="input2" placeholder="请填写您的电话号码" value="" pattern="1[3-8][0-9]{9}" name="tel"/><br/>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 text-center" rows="2">计划 购 车 时间 :</div>
+                <div class="col-md-8 dropdown p-o">
+                    <!--下拉内容-->
+                    <select class="form-control active w-100 selecter">
+                        <option href="" class="dropdown-item active"> 计 划 购 车 时 间 </option>
+                        <option href="" class="dropdown-item  "> 当 天 </option>
+                        <option href="" class="dropdown-item  "> 三 天 内 </option>
+                        <option href="" class="dropdown-item  "> 一 周 内 </option>
+                        <option href="" class="dropdown-item  "> 一 月 内 </option>
+                        <option href="" class="dropdown-item  "> 三 月 内 </option>
+                        <option href="" class="dropdown-item  "> 半 年 内 </option>
+                        <option href="" class="dropdown-item  "> 其 他 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <input class="mt-1 ml-2" checked type="checkbox"/>
+                    <a class="h6" href="">同意隐私条款</a>
+                </div>
+                <div class="col-md-8">
+                    <div class="ml-5 pl-5">
+                        <button class="btn btn-success ml-5 w-75" id="b1">提交 ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右边图-->
+        <div class="col-md-7 p-0 ">
+            <!-- 地图 -->
+            <!-- <div class="content">
+                <div class="form-item">
+                    <div style="width:710px">
+                        <div id="myMap" style="width:100%;height:400px;"></div>
+                    </div>
+                </div>
+            </div> -->
+            <div style="width:690px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+
+            <!--<img class="map" src="routes/image/map.png" alt=""/>-->
+        </div>
+    </div>
+     <!--底部-->
+    <div id="five" class="fivebg p-0 mt-5">
+        <div  class="container">
+            <ul class="row list-unstyled ml-5 pl-5">
+                <li class="col-md-4 mt-5">
+                    <img class="w-25" src="routes/image/icon1.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">索取报价</a>
+                </li>
+                <li class="col-md-4 mt-5">
+                    <img class="w-25" src="routes/image/icon2.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">查询经销商</a>
+                </li>
+                <li class="col-md-4 mt-5">
+                    <img class="w-25" src="routes/image/icon3.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">预约试驾</a>
+                </li>
+                <li class="col-md-4 mt-5 mb-5">
+                    <img class="w-25" src="routes/image/icon4.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">索取产品手册</a>
+                </li>
+                <li class="col-md-4 mt-5 mb-5">
+                    <img class="w-25" src="routes/image/icon5.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">查询新车库存</a>
+                </li>
+                <li class="col-md-4 mt-5 mb-5">
+                    <img class="w-25" src="routes/image/icon6.png" alt=""/><br/>
+                    <a class="text-white mt-4 d-inline-block" href="">奥迪在线4S店</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-5">
+            <a class="ml-4 text-white" href="">订阅奥迪新闻专递</a>
+            <a class="ml-4 text-white" href="">隐私权/版权</a>
+            <a class="ml-4 text-white" href="">奥迪全球</a>
+            <a class="ml-4 text-white" href="">一汽-大众</a>
+            <a class="ml-4 text-white" href="">English Version</a>
+            <a class="ml-4 text-white" href="">吉ICP备09000793号</a>
+            <a class="ml-4 text-white" href="">吉公网安备 22010602000241号</a>
+        </div>
+        <hr class="bg-white"/>
+        <div id="five-foot" class="ml-5 pb-2">
+            <a class="text-white" href="">© 2019 一汽-大众汽车有限公司 版权所有</a>
+        </div>
+    </div>
+</div>>
+<script src="js/jquery.min.js"></script>
+<script>
+    var b1=document.getElementById('b1');
+    b1.onclick= function () {
+        // console.log(input1.value)
+        var xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                var result=xhr.responseText;
+                if(result=='[]'){
+                    alert("登陆失败");
+                }else{
+                    alert("登录成功");
+                     //登陆成功，跳转到首页
+                    window.location.href=`audi.html`;
+                     console.log(typeof(result));
+                }
+               
+            }
+        }
+//              var url='/login';
+//              xhr.open('post',url,true);
+//              var formdata='phone='+input1.value+'&upwd='+input2.value;
+//              xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+//              xhr.send(formdata);
+        var url='login?name='+input1.value+"&phone="+input2.value;
+        xhr.open('get',url,true);
+        xhr.send();
+    }
+</script>
+    <!-- 地图 -->
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.395645,39.929986);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    initMap();//创建和初始化地图
+
+
+    var html="";
+    var all="";
+   var b1=document.getElementById("b1");
+        b1.onclick=function(){
+            var selecter=document.querySelectorAll(".selecter");
+            for(var i=0;i<selecter.length;i++){
+                html+=selecter[i].value+",";
+            }
+            var ipt=document.querySelectorAll(".ipt");
+            var val="";
+            for(var j=0;j<ipt.length;j++){
+                val+=ipt[j].value+","
+                val.slice(0,-1);
+            };
+            var qwer=document.querySelector(".qwer:checked")
+            var x="";
+            x+=qwer.value;
+            all+=html+val+x;
+        console.log(all)
+            var alls=all.split(",");
+            console.log(alls);
+      $.ajax({
+            url:"login",
+            type:'get',
+            data:{al:all},
+            dataTtype:"json",
+            success:function(result){
+                alert("提交成功，稍后工作人员会与您取得联系，谢谢您的合作！");
+            }
+        })
+
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "car",
+  "version": "1.0.0",
+  "description": "汽车",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webkangyakun/car.git"
+  },
+  "keywords": [
+    "car"
+  ],
+  "author": "kyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webkangyakun/car/issues"
+  },
+  "homepage": "https://github.com/webkangyakun/car#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
+  }
+}

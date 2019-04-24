@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link rel="stylesheet" href="BOOT/bootstrap.css"/>
+    <script src="BOOT/jquery.min.js"></script>
+    <script src="BOOT/popper.min.js"></script>
+    <script src="BOOT/bootstrap.min.js"></script>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main1{
+            background-image: url(routes/image/sport/bg.png);
+            background-size: cover;
+            background-repeat: repeat-x;
+            color: #838383;
+        }
+        #main1 p:hover{
+            color: red;
+        }
+        #main2{
+            background-image: url(routes/image/sport/bg2.jpg);
+        }
+        #main3{
+            background: #1b1b1b;
+            color: #888b85;
+            font-family: 微软雅黑;
+
+        }
+        #main3 a{
+         text-decoration:none !important;
+        }
+        #main3 a:hover{
+           color: white !important;
+        }
+        #a{
+            position: relative;
+        }
+        #tip{
+            position: absolute;
+            top: -145px;
+            left: -55px;
+            /*top:-135px ;*/
+            /*left: 1018px;*/
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid"></div>
+    <!--黑色背景div-->
+   <div id="main1">
+        <div class="row pt-4">
+            <div class="col-md-3 pt-2 text-center">
+                <a href="audi.html">
+                    <img src="routes/image/sport/logo1.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-md-6 text-center h2">
+                <p>运动基因</p>
+            </div>
+            <div class="col-md-3 pt-2 text-center">
+                <img src="routes/image/sport/logo2.png" alt=""/>
+            </div>
+        </div>
+       <!--轮播-->
+       <div class="carousel text-center" data-ride="carousel" id="demo">
+           <div class="carousel-inner">
+               <!--<div class="carousel-item active">-->
+                   <!--<img src="routes/image/sport/lb1.jpg" alt=""/>-->
+               <!--</div>-->
+               <!--<div class="carousel-item">-->
+                   <!--<img src="routes/image/sport/lb2.jpg" alt=""/>-->
+               <!--</div>-->
+               <!--<div class="carousel-item">-->
+                   <!--<img src="routes/image/sport/lb3.jpg" alt=""/>-->
+               <!--</div>-->
+           </div>
+           <ul class="carousel-indicators">
+               <li class="active" data-slide-to="0"data-target="#demo"></li>
+               <li data-slide-to="1" data-target="#demo"></li>
+               <li data-slide-to="2" data-target="#demo"></li>
+           </ul>
+       </div>
+   </div>
+   <div id="main2" class="text-center pt-5">
+       <!--<div>-->
+           <!--<img src="routes/image/sport/sport1.png" alt=""/>-->
+       <!--</div>-->
+       <!--<div class="mt-5 pb-5">-->
+           <!--<img src="routes/image/sport/sport2.png" alt=""/>-->
+       <!--</div>-->
+   </div>
+   <div id="main3">
+       <div class="row">
+           <div class="col-lg-12 col-md-12 p-3 h5 ">
+               <a class="text-muted ml-5 text-d" href="">预约试驾</a>
+               <a class="text-muted ml-5" href="">查询经销商</a>
+               <a class="text-muted ml-5" href="audi.html">一汽-大众奥迪</a>
+               <a class="text-muted ml-5" href="">联系我们</a>
+               <a class="text-muted ml-5" href="">版权说明</a>
+               <div class="text-right">
+                   <a class="mr-5" href="https://weibo.com/iaudi?refer_flag=1001030101_&is_all=1"><img src="routes/image/sport/xl.png" alt=""/></a>
+                   <a id="a" class="mr-5" href=""><img src="routes/image/sport/wx.png" alt=""/>
+                       <div id="tip">
+                           <img src="routes/image/sport/wnma.png" alt=""/>
+                       </div>
+                   </a>
+                   <a  class="mr-5" href="https://audi.tmall.com/view_shop.htm?spm=a220m.1000858.0.0.y7YYMN&shop_id=118799364&scm=1048.1.1.12&rn=bc8e68fdeabe63b41c815038a281bef8">
+                       <img src="routes/image/sport/tm.png" alt=""/>
+                   </a>
+               </div>
+           </div>
+
+       </div>
+   </div>
+</body>
+<script>
+    var a=document.getElementById('a');
+    a.onmouseenter=function(){
+        var tip=document.getElementById('tip');
+        tip.style.display='block';
+    }
+    a.onmouseout=function(){
+        var tip=document.getElementById('tip');
+        tip.style.display='none';
+    }
+
+
+    $(function(){
+        $.ajax({
+            url:'sl',
+            type:'get',
+            data:{},
+            dataType:"json",
+            success:function(result){
+                var html="";
+                for (results of result)
+                html+=`<div class="carousel-item" id="${results.id}">
+                <img src="${results.img}" alt=""/>
+                </div>`
+               $('.carousel-inner').html(html);
+               $("#1").addClass("active");
+            }
+        })
+
+
+        $.ajax({
+            url:"sport",
+            type:"get",
+            data:{},
+            dataType:"json",
+            success:function(result){
+                var html="";
+                html+=` <div>
+                <img src="${result[0].img1}" alt=""/>
+                </div>
+                <div class="mt-5 pb-5">
+                <img src="${result[0].img2}" alt=""/>
+                </div>`
+                $('#main2').html(html);
+            }
+        })
+    })
+</script>
+</html>

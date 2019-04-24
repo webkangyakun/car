@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link rel="stylesheet" href="BOOT/bootstrap.css"/>
+    <script src="BOOT/jquery.min.js"></script>
+    <script src="BOOT/popper.min.js"></script>
+    <script src="BOOT/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/audi.css"/>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #top{
+            position: relative;
+            width: 74%;
+            height: 100px;
+            /*border: 1px solid red;*/
+            left: 13%;
+        }
+        #top img:last-child{
+            position: absolute;
+             left:90% ;
+        }
+        #top ul{
+            display: flex;
+            list-style: none;
+            margin-top:25px;
+        }
+        #top ul a{
+            margin-left:30px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+        #top ul a:hover{
+            color: deepskyblue;
+        }
+        #banner{
+            position: relative;
+            width: 74%;
+            height: 467px;
+            margin: 0 auto;
+            /*border:1px solid red;*/
+        }
+        #banner img{
+            position: relative;
+            width: 100%;
+        }
+        #banner1{
+            position: relative;
+            top: -10px;
+            width: 100%;
+            height: 32px;
+            background:black;
+        }
+        #banner1 ul{
+            position: relative;
+            display: flex;
+            list-style: none;
+        }
+        #banner1 a{
+            color: white;
+            font-weight: bolder;
+            margin-left: 30px;
+            text-decoration: none;
+            line-height: 30px;
+        }
+        #banner1 a:hover{
+            color:wheat;
+        }
+        #banner2{
+            width: 100%;
+        }
+        #banner2>div{
+            width: 54%;
+            height: 650px;
+            float: left;
+            background-color: black;
+            color: white;
+        }
+        #banner2>div h2{
+            margin-top:20%;
+            margin-left:10%;
+        }
+        #banner2>div h5{
+            margin-top: 15%;
+            margin-left: 15%;
+        }
+        #banner2 button{
+            margin-left: 40%;
+            margin-top: 17%;
+            width: 35%;
+            height: 15%;
+            background: black;
+            border: 1px solid whitesmoke;
+            color: #f6f6f6;
+            font-size: 30px;
+        }
+        #banner2 button:hover{
+            cursor: pointer;
+            color: deepskyblue;
+        }
+        #banner2>div+div{
+            width: 46%;
+            height: 650px;
+            float: right;
+            background-image: url(routes/image/banner2.jpg);
+        }
+        #banner3{
+            /*border: 1px solid red;*/
+            clear: both;
+        }
+        #banner3 h1{
+            padding-top: 6%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        .b3fontleft{
+            font-size: 22px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .b3fontright{
+            font-size: 18px;
+        }
+        .b3divleft{
+            border-top: 5px solid black;
+            width: 16%;
+            height:91px;
+            float:left;
+            line-height: 280%;
+            margin-right: 1%;
+        }
+        .b3divright{
+            border-top: 1px solid black;
+            width: 83%;
+            height: 95px;
+            line-height: 280%;
+            float: left;
+        }
+        #banner4{
+             clear: both;
+        }
+        #banner5{
+            margin-top: 3%;
+            display: flex;
+        }
+        .b5div{
+            /*border: 1px solid red;*/
+            float: left;
+            margin: 5px;
+            line-height: 200%;
+            font-weight: bold;
+        }
+        .b5div a{
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            /*border: 1px solid deepskyblue;*/
+            /*background: deepskyblue;*/
+            font-size: 20px;
+        }
+        .b5div a:hover{
+            color: blue;
+        }
+        .b5div span{
+            padding-top: 3%;
+        }
+        .b5img{
+            display: inline-block;
+           width: 50%;
+        }
+        #foot{
+            background: #4c4c4c;
+            /*height: 200px;*/
+        }
+        .footfont{
+            font-size: 12px;
+            color: whitesmoke;
+        }
+        #f1{
+            width: 50%;
+            /*height: 50px;*/
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+        #f1 div{
+            width: 20%;
+            height:100px;
+            border: 1px solid burlywood;
+            text-align: center;
+        }
+        #f1 div img{
+            width: 50%;
+            margin-top: 10%;
+        }
+        #f1 div p a{
+            text-decoration: none;
+            color: #f6f6f6;
+        }
+        #f2{
+            width: 50%;
+            /*height: 50px;*/
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+        #f2 div{
+            width: 20%;
+            height:100px;
+            border: 1px solid burlywood;
+            text-align: center;
+        }
+        #f2 div img{
+            width: 50%;
+            margin-top: 10%;
+        }
+        #f2 div p a{
+            text-decoration: none;
+            color: #f6f6f6;
+        }
+        #foot ul{
+            list-style: none;
+            display: flex;
+            color: white;
+            font-size: 10px;
+        }
+        #foot ul li{
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        #foot ul li a{
+            color:white;
+            text-decoration: none;
+        }
+        #foot b{
+            color: white;
+            margin-top: 20px;
+            margin-left: 40px;
+            font-size: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <a href="audi.html">
+            <img src="routes/image/01.png" alt=""/>
+            <img src="routes/image/logo.jpg" width="100px" alt=""/>
+        </a>
+        <!-- <ul>
+            <li><a href="" style="margin-left: 5px">奥迪车型</a></li>
+            <li><a href="">奥迪官方认证</a></li>
+            <li><a href="">奥迪服务</a></li>
+            <li><a href="">创新科技</a></li>
+            <li><a href="">奥迪品牌</a></li>
+            <li><a href="">Audi Sport</a></li>
+            <li><a href="">搜索</a></li>
+        </ul> -->
+    </div>
+    <div id="banner">
+        <img src="routes/image/banner.jpg" alt=""/>
+        <!--<div id="banner1">-->
+            <!--<ul>-->
+                <!--<li><a href="">官方认证二手车</a></li>-->
+                <!--<li><a href="">销售服务</a></li>-->
+                <!--<li><a href="">置换收购服务</a></li>-->
+                <!--<li><a href="">官方认证活动</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div id="banner2">
+            <div>
+                <h2>官方认证活动</h2>
+                <h5>源自奥迪、更懂奥迪、为您提供全方位高品质服务</h5>
+                <a href="">
+                    <button>立即查看</button>
+                </a>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="contain" id="banner3">
+            <img class="pt-5" src="routes/image/认证.png" alt="">
+            <!-- <h1>关于官方认证</h1>
+            <div class="row"> 
+                 <div class="b3fontleft b3divleft col-md-2">官方认证，严把质量</div>
+                <div class="b3fontright b3divright col-md-10">检测师根据全球统一的110项检测标准，360°深入检查车辆的每一个细节，严格把控车辆来源，以保证展现给大家的车辆均符合无重大事故、无重度改装、使用年限不超过60个月、行驶里程不超过15万公里等要求。</div>
+            </div>
+            
+            <div class="b3fontleft b3divleft">合理估价，深得人心</div>
+            <div class="b3fontright b3divright">以全国统一的评估标准对二手车进行评估，并根据市场行情给出公平合理的估价，而且对于符合标准的车辆，会以高于市场的价格将其收购。</div>
+            <div class="b3fontleft b3divleft">技术领先，品质优异</div>
+            <div class="b3fontright b3divright">奥迪官方认证二手车的“再制造”工艺是借助革新性的工具、材料及设备，高质量标准、快速精细地处置车辆各类损伤，辅以专业的养护技术，高效将使用车辆恢复至出厂时的品质及外观状态，为用户提供新车般的产品体验。</div>
+            <div class="b3fontleft b3divleft">诚信为本，交易透明</div>
+            <div class="b3fontright b3divright">倾力搭建与消费者之间的信任纽带，收车、整备翻新、出售过程均透明可见。每一辆认证车辆均使用奥迪原厂配件整备，且维修保养记录真实可靠。</div>
+            <div class="b3fontleft b3divleft">深耕细作，贴心服务</div>
+            <div class="b3fontright b3divright">专注优质服务，打造从售前到售后的一套完备服务体系。包括专人陪同的试乘试驾服务、2年0利率购车金融方案、一站式车险及手续代办服务、新/旧车无缝更替等诸多便利，售后承诺7天无理由退换、1年不限里程原厂延长质保、24小时道路救援服务等，免除一切后顾之忧。</div> -->
+        </div>
+        <div id="banner4">
+        </div>
+        <!-- <div id="banner5">
+            <div class="b5div">
+                <img class="b5img w-100" src="routes/image/b5.jpg" alt=""/>
+                <span>销售服务<br>严格的认证标准和认证流程为您提供最优质的销售服<br><a href="">查看详情></a>
+                </span>
+            </div>
+            <div class="b5div">
+                <img class="b5img w-100" src="routes/image/b5_2.jpg" alt=""/>
+                <span>置换认证服务<br>可以以旧换旧，也可以以旧换新，置换爱车的不二选择<br><a href="">查看详情></a>
+                </span>
+            </div>
+            <div class="b5div">
+                <img class="b5img w-100" src="routes/image/b5_3.jpg" alt=""/>
+                <span>在线4S店<br>海量官方认证二手车供您挑选<br><a href="">查看详情></a>
+                </span>
+            </div>
+        </div> -->
+        <div id="five" class="fivebg mt-5">
+            <div  class="container">
+                <ul class="row list-unstyled ml-5 pl-5">
+                    <li class="col-md-4 mt-5">
+                        <img class="w-25" src="routes/image/icon1.png" alt=""/><br/>
+                        <a class="text-white mt-4 d-inline-block" href="">索取报价</a>
+                    </li>
+                    <li class="col-md-4 mt-5">
+                        <img class="w-25" src="routes/image/icon2.png" alt=""/><br/>
+                        <a class="text-white mt-4 d-inline-block" href="">查询经销商</a>
+                    </li>
+                    <li class="col-md-4 mt-5">
+                        <img class="w-25" src="routes/image/icon3.png" alt=""/><br/>
+                        <a class="text-white mt-4 d-inline-block" href="">预约试驾</a>
+                    </li>
+                    <li class="col-md-4 mt-5 mb-5">
+                        <img class="w-25" src="routes/image/icon4.png" alt=""/><br/>
+                        <a class="text-white mt-4 d-inline-block" href="">索取产品手册</a>
+                    </li>
+                    <li class="col-md-4 mt-5 mb-5">
+                        <img class="w-25" src="routes/image/icon5.png" alt=""/><br/>
+                        <a class="text-white mt-4 d-inline-block" href="">查询新车库存</a>
+                    </li>
+                    <li class="col-md-4 mt-5 mb-5">
+                        <img class="w-25" src="routes/image/icon6.png" alt=""/><br/>
+                        <a class="text-white mt-4 d-inline-block" href="">奥迪在线4S店</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-5">
+                <a class="ml-4 text-white" href="">订阅奥迪新闻专递</a>
+                <a class="ml-4 text-white" href="">隐私权/版权</a>
+                <a class="ml-4 text-white" href="">奥迪全球</a>
+                <a class="ml-4 text-white" href="">一汽-大众</a>
+                <a class="ml-4 text-white" href="">English Version</a>
+                <a class="ml-4 text-white" href="">吉ICP备09000793号</a>
+                <a class="ml-4 text-white" href="">吉公网安备 22010602000241号</a>
+            </div>
+            <hr class="bg-white"/>
+            <div id="five-foot" class="ml-5 pb-2">
+                <a class="text-white" href="">© 2019 一汽-大众汽车有限公司 版权所有</a>
+            </div>
+        </div>
+        <!--<div id="foot">-->
+            <!--<div id="f1">-->
+                <!--<div class="footfont">-->
+                  <!--<img src="routes/image/icon1.png" alt=""/>-->
+                  <!--<p><a href="">索取报价</a></p>-->
+                <!--</div>-->
+                <!--<div class="footfont">-->
+                    <!--<img  src="routes/image/icon2.png" alt=""/>-->
+                    <!--<p><a href="">查询经销商</a></p>-->
+                <!--</div>-->
+                <!--<div class="footfont">-->
+                    <!--<img src="routes/image/icon3.png" alt=""/>-->
+                    <!--<p><a href="">预约试驾</a></p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div id="f2">-->
+                <!--<div class="footfont">-->
+                    <!--<img src="routes/image/icon4.png" alt=""/>-->
+                    <!--<p><a href="">产品手册</a></p>-->
+                <!--</div>-->
+                <!--<div class="footfont">-->
+                    <!--<img  src="routes/image/icon5.png" alt=""/>-->
+                    <!--<p><a href="">新车库存</a></p>-->
+                <!--</div>-->
+                <!--<div class="footfont">-->
+                    <!--<img src="routes/image/icon6.png" alt=""/>-->
+                    <!--<p><a href="">在线4S店</a></p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<ul>-->
+                <!--<li><a href="">订阅奥迪新闻专递</a></li>-->
+                <!--<li><a href="">隐私权/版权</a></li>-->
+                <!--<li><a href="">奥迪全球</a></li>-->
+                <!--<li><a href="">一汽-大众</a></li>-->
+                <!--<li><a href="">English Version</a></li>-->
+                <!--<li><a href="">吉ICP备09000793号</a></li>-->
+                <!--<li><a href="">吉公网安备 22010602000241号</a></li>-->
+            <!--</ul>-->
+            <!--<hr/>-->
+            <!--<b>© 2019 一汽-大众汽车有限公司 版权所有</b>-->
+        <!--</div>-->
+    </div>
+</body>
+</html>
